@@ -1,0 +1,134 @@
+IMDB-BINARY:
+  gnn_type: 'gin'
+  PredNet_Nlayers_CGBank: 2
+  PredNet_Nlayers_REComp: 1
+  get_emb_type: 'all'
+  batch_size: 32
+  InfNet_hid_dims: 32 16 #
+  N_coms: 2
+  pt_epochs: 300
+  pt_mask_rate: 0.5
+  PredNet_edim: 512
+  JointNet_lr: 0.0001 # 0.0001
+  JointNet_dropout: 0.2
+  pt_x_lambda: 1
+  pt_random_lambda: 1
+  save_iter: 100
+  load_iter: 100
+  ft_start_cnt: 3
+  ft_end_cnt: 4
+  pooltype: 'mean'
+IMDB-MULTI:
+  PredNet_Nlayers_CGBank: 2
+  PredNet_Nlayers_REComp: 1
+  get_emb_type: "all"# 'part'
+  batch_size: 32
+  InfNet_hid_dims: 64 16
+  N_coms: 4
+  pt_epochs: 200
+  pt_mask_rate: 0.5
+  PredNet_edim: 512
+  JointNet_lr: 0.001
+  JointNet_dropout: 0.2
+  pt_x_lambda: 1
+  pt_random_lambda: 1
+  save_iter: 10
+  load_iter: 10
+  ft_start_cnt: 20
+  ft_end_cnt: 21
+  pooltype: 'mean'
+PROTEINS:
+  PredNet_Nlayers_CGBank: 2
+  PredNet_Nlayers_REComp: 1
+  get_emb_type: "all"#'part'
+  batch_size: 32
+  InfNet_hid_dims: 32 16
+  N_coms: 4
+  pt_epochs: 50
+  pt_mask_rate: 0.5
+  PredNet_edim: 512
+  JointNet_lr: 0.0005
+  JointNet_dropout: 0.2
+  pt_x_lambda: 1
+  pt_random_lambda: 1
+  save_iter: 25
+  load_iter: 25
+  ft_start_cnt: 1
+  ft_end_cnt: 3
+  pooltype: 'max'
+MUTAG:
+  PredNet_Nlayers_CGBank: 1
+  PredNet_Nlayers_REComp: 5
+  batch_size: 32
+  InfNet_hid_dims: 64 32
+  N_coms: 2 # or 8
+  pt_epochs: 20
+  pt_mask_rate: 0.75
+  PredNet_edim: 32
+  JointNet_lr: 0.001
+  JointNet_dropout: 0.2
+  pt_x_lambda: 1
+  pt_random_lambda: 1
+  save_iter: 1
+  load_iter: 1
+  ft_start_cnt: 1
+  ft_end_cnt: 21
+  pooltype: 'sum'
+  get_emb_type: "part"
+REDDIT-BINARY:
+  PredNet_Nlayers_CGBank: 2
+  PredNet_Nlayers_REComp: 1
+  InfNet_hid_dims: 32 16 #512 256
+  N_coms: 2
+  get_emb_type: "all"
+  recomp_type: "linear"
+  batch_size: 8
+  pt_epochs: 200
+  pt_mask_rate: 0.75
+  PredNet_edim: 512
+  JointNet_lr: 0.0005
+  JointNet_dropout: 0.2
+  pt_x_lambda: 1
+  pt_random_lambda: 1 # or 0.1
+  save_iter: 200
+  load_iter: 200
+  ft_start_cnt: 1
+  ft_end_cnt: 2
+  pooltype: 'max'
+COLLAB:
+  PredNet_Nlayers_CGBank: 2
+  PredNet_Nlayers_REComp: 1
+  InfNet_hid_dims: 32 16
+  N_coms: 4
+  get_emb_type: "all"
+  pt_epochs: 20
+  pt_mask_rate: 0.75
+  PredNet_edim: 256
+  JointNet_lr: 0.001
+  JointNet_dropout: 0.2
+  pt_x_lambda: 1
+  pt_random_lambda: 1
+  save_iter: 10
+  load_iter: 10
+  ft_start_cnt: 2
+  ft_end_cnt: 3
+  pooltype: 'max'
+NCI1:
+  PredNet_Nlayers_CGBank: 2
+  PredNet_Nlayers_REComp: 1
+  batch_size: 32
+  InfNet_hid_dims: 32 16
+  N_coms: 2 # 4
+  get_emb_type: "all"
+  pt_epochs: 200
+  pt_mask_rate: 0.25
+  PredNet_edim: 1024
+  JointNet_lr: 0.0005 # 0.0005
+  JointNet_dropout: 0.2
+  pt_x_lambda: 1.0
+  pt_random_lambda: 0.5
+  save_iter: 25
+  load_iter: 25
+  ft_start_cnt: 6
+  ft_end_cnt: 9
+  pooltype: 'max'
